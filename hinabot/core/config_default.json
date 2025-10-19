@@ -1,0 +1,10 @@
+{
+    "release": "release",
+    "token": "",
+    "prefix": "!",
+    "restricted_mode": {
+        "enabled": false,
+        "allowed_server_id": []
+    },
+    "blocked_users": []
+}
