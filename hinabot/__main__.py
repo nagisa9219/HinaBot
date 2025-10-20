@@ -11,15 +11,9 @@ else:
     import discord
     from . import bot
     from hinabot.core.config import Config
+    from hinabot.core.config import load_config
 
-    def load_config():
-        config_path = './hinabot/config.json'
-        if not os.path.isfile(config_path):
-            raise FileNotFoundError(f'Config file not found at {config_path}')
-        with open(config_path, 'r', encoding='utf-8') as f:
-            config_data = json.load(f)
-        return Config(**config_data)
-    
-    config = load_config()
+    config_path = './hinabot/config.json'
+    config = load_config(config_path)
     # print(config)
     bot.run(config)
